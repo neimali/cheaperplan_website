@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ltly602634744.cheaperplan",
+      "sha256_cert_fingerprints": [
+        "8A:C8:1C:13:83:9C:9A:2E:64:87:F7:B2:EA:7E:8C:D1:CA:F5:E7:A2:49:DA:E2:CD:10:35:94:2A:53:95:B1:AA" 
+      ]
+    }
+  }
+]
