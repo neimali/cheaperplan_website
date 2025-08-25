@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "26STQ99L4A.com.yinghan.cheaperplan",
-        "paths": [ "/screens/ResetPasswordScreen", "/screens/ResetPasswordScreen*", "/screens/ResetPasswordScreen/*"]
+        "paths": ["/screens/ResetPasswordScreen", "/screens/ResetPasswordScreen/*"]
       }
     ]
   }
