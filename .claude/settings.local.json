@@ -10,7 +10,10 @@
       "Bash(rm:*)",
       "Bash(npm install:*)",
       "Bash(npm run build:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(npm run typecheck:*)",
+      "WebFetch(domain:supabase.com)"
     ],
     "deny": [],
     "ask": []

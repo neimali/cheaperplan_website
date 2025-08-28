@@ -1,222 +1,350 @@
+// app/privacy/page.tsx
+import type { Metadata } from "next";
+import styles from '../styles/legal-page.module.css';
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | CheaperPlan",
+  description:
+    "CheaperPlan Privacy Policy: what we collect, how we use it, how we protect it, and your rights.",
+};
+
+const LAST_UPDATED = "August 27, 2025";
+
 export default function Privacy() {
   return (
-    <div className="container">
-      <div className="header">
-        <div className="logo">CheaperPlan</div>
-      </div>
-      
-      <div className="content">
-        <h1 className="title">Privacy Policy for CheaperPlan</h1>
-        <p className="subtitle">
-          Effective Date: {new Date().toLocaleDateString()}
-        </p>
-        
-        <div className="section">
+    <main>
+      <article className={styles.container}>
+        <header>
+          <h1>Privacy Policy</h1>
+          <p className={styles.muted}>Last updated: {LAST_UPDATED}</p>
+        </header>
+
+        <nav className={styles.tableOfContents}>
+          <h2>Table of Contents</h2>
+          <p>Click on the links below to jump to each section:</p>
+          <ol>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#info-we-collect">Information We Collect</a></li>
+            <li><a href="#how-we-use">How We Use Information</a></li>
+            <li><a href="#sharing">Sharing of Information</a></li>
+            <li><a href="#security">Data Storage and Security</a></li>
+            <li><a href="#rights">User Rights</a></li>
+            <li><a href="#retention">Data Retention</a></li>
+            <li><a href="#children">Children's Privacy</a></li>
+            <li><a href="#updates">Policy Updates</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ol>
+        </nav>
+
+        <section id="introduction">
           <h2>1. Introduction</h2>
           <p>
-            CheaperPlan ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App"). Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the App.
+            Welcome to CheaperPlan. Your privacy is important to us, and we are committed to protecting the
+            information you share with us. This Privacy Policy explains what information we collect, how we use
+            it, and the choices you have regarding your data when using our mobile application and related services.
           </p>
-        </div>
+          <p>
+            By using CheaperPlan, you agree to the practices described in this Privacy Policy. If you do not agree,
+            please discontinue use of our services.
+          </p>
+          <p>
+            This policy applies to all users of CheaperPlan and covers data collected through our mobile app, website,
+            and related features.
+          </p>
+        </section>
 
-        <div className="section">
+        <section id="info-we-collect">
           <h2>2. Information We Collect</h2>
-          
-          <h3>2.1 Personal Information We Collect Directly From You</h3>
-          <p>When you use our App, we may collect the following personal information:</p>
-          <ul>
-            <li><strong>Account Information:</strong> Email address and password for account creation and authentication</li>
-            <li><strong>Mobile Plan Details:</strong> Information about your current mobile phone plan including:
-              <ul>
-                <li>Provider name</li>
-                <li>Data allowance</li>
-                <li>Coverage area</li>
-                <li>Price</li>
-                <li>Network type</li>
-                <li>Additional features (voicemail, call display, call waiting, suspicious call detection, hotspot, conference call, video call)</li>
-              </ul>
-            </li>
-            <li><strong>Profile Information:</strong> User preferences and settings</li>
-            <li><strong>Communication Data:</strong> Information you provide when contacting our support team</li>
-          </ul>
+          <p>
+            When you use CheaperPlan, we collect the following types of information to provide and improve our services.
+            We only collect data necessary to operate CheaperPlan and improve user experience. We do not collect
+            unnecessary or excessive personal data.
+          </p>
 
-          <h3>2.2 Information We Collect Automatically</h3>
-          <p>When you use our App, we automatically collect certain information:</p>
-          <ul>
-            <li><strong>Device Information:</strong> Device identifiers, operating system, and app version</li>
-            <li><strong>Push Notification Tokens:</strong> Expo push tokens for sending notifications about plan recommendations and updates</li>
-            <li><strong>Usage Data:</strong> How you interact with the App, including features used and time spent in the App</li>
-            <li><strong>Session Data:</strong> Authentication session information for maintaining your logged-in state</li>
-          </ul>
+          <h3 id="info-you-provide">2.1 Information You Provide</h3>
+        <ul>
+          <li>
+            <strong>Account Information:</strong> When you create an account, we collect your email address and
+            password (stored securely in encrypted form).
+          </li>
+          <li>
+            <strong>Mobile Plan Details:</strong> You may provide information about your current mobile plan (e.g.,
+            carrier, monthly price, data allowance, additional features).
+          </li>
+          <li>
+            <strong>Subscription Information:</strong> If you purchase a subscription, payment is processed securely
+            through third-party providers (e.g., Apple App Store, Google Play Store, RevenueCat). We do not store
+            your credit card details.
+          </li>
+        </ul>
 
-          <h3>2.3 Information from Third Parties</h3>
-          <p>We may receive information from the following third-party services:</p>
-          <ul>
-            <li><strong>Supabase:</strong> Our backend database service that stores your account and plan information</li>
-            <li><strong>RevenueCat:</strong> Subscription management service for premium features, including subscription status and purchase history</li>
-            <li><strong>Expo:</strong> Development platform that handles push notifications and app updates</li>
-          </ul>
-        </div>
+        <h3 id="info-auto">2.2 Information Collected Automatically</h3>
+        <ul>
+          <li>
+            <strong>Usage Data:</strong> We record which recommended plans you have already viewed to avoid sending
+            duplicate notifications.
+          </li>
+          <li>
+            <strong>Push Notification Tokens:</strong> We collect device-specific tokens (e.g., Expo Push Token) to
+            send you personalized updates.
+          </li>
+          <li>
+            <strong>Device and Technical Information (via service providers):</strong> Our third-party service
+            providers (e.g., Supabase, RevenueCat, Expo) may automatically collect certain technical details (such
+            as device model, operating system, app version, IP address, and error logs) to ensure proper functionality,
+            manage subscriptions, deliver notifications, and improve stability. We do not directly use this information
+            beyond what is necessary for app operation.
+          </li>
+          <li>
+            <strong>Hosting Provider Logs:</strong> Our hosting and infrastructure providers (e.g., AWS, Vercel) may
+            automatically generate standard server logs (such as IP address, browser or device type, and access time)
+            for security and reliability.
+          </li>
+        </ul>
+        </section>
 
-        <div className="section">
-          <h2>3. How We Use Your Information</h2>
-          <p>We use the collected information for the following purposes:</p>
-          
-          <h3>3.1 Core App Functionality</h3>
-          <ul>
-            <li>Creating and managing your user account</li>
-            <li>Storing and retrieving your mobile plan information</li>
-            <li>Providing personalized plan recommendations based on your current plan</li>
-            <li>Calculating potential savings on alternative mobile plans</li>
-          </ul>
+        <section id="how-we-use">
+          <h2>3. How We Use Information</h2>
+        <p>
+          We use the information described in Section 2 (“Information We Collect”) for the following purposes. We do
+          not use your information for advertising, marketing, or third-party tracking purposes.
+        </p>
+        <ul>
+          <li>
+            <strong>Account Creation and Authentication</strong>
+            <div><em>Data Used:</em> Email address, password (Account Information).</div>
+            <div><em>Purpose:</em> To register, authenticate, and secure your user account.</div>
+          </li>
+          <li>
+            <strong>Plan Comparison and Personalized Recommendations</strong>
+            <div><em>Data Used:</em> Mobile Plan Details (Account Information) and Usage Data (Viewed Recommendations).</div>
+            <div><em>Purpose:</em> To compare your current plan with alternatives and avoid sending duplicate suggestions.</div>
+          </li>
+          <li>
+            <strong>Push Notifications</strong>
+            <div><em>Data Used:</em> Push Notification Tokens.</div>
+            <div><em>Purpose:</em> To deliver alerts about potentially cheaper or more suitable mobile plans.</div>
+          </li>
+          <li>
+            <strong>Subscription Management</strong>
+            <div><em>Data Used:</em> Subscription status from the App Store/Google Play/RevenueCat.</div>
+            <div><em>Purpose:</em> To determine premium access and enable subscription-based features.</div>
+          </li>
+          <li>
+            <strong>Service Security, Stability, and Troubleshooting</strong>
+            <div><em>Data Used:</em> Device/Technical Information and Hosting Logs (through service providers).</div>
+            <div><em>Purpose:</em> To ensure app stability, detect and prevent misuse, troubleshoot issues, and maintain compatibility.</div>
+          </li>
+          <li>
+            <strong>Improving Our Services</strong>
+            <div><em>Data Used:</em> Aggregated usage data (non-identifiable).</div>
+            <div><em>Purpose:</em> To analyze user behavior on a qualitative level and refine app features and experience.</div>
+          </li>
+          <li>
+            <strong>Legal Compliance and Protection</strong>
+            <div><em>Data Used:</em> Any relevant information as required by law.</div>
+            <div><em>Purpose:</em> To comply with legal obligations or respond to lawful requests.</div>
+          </li>
+        </ul>
+        </section>
 
-          <h3>3.2 Communication</h3>
-          <ul>
-            <li>Sending push notifications about new plan recommendations</li>
-            <li>Providing customer support and responding to your inquiries</li>
-            <li>Sending important updates about the App or changes to our services</li>
-          </ul>
+        <section id="sharing">
+          <h2>4. Sharing of Information</h2>
+        <p>We do not sell your personal information. We only share information in the limited circumstances described below:</p>
 
-          <h3>3.3 Premium Features</h3>
-          <ul>
-            <li>Managing subscription status for premium features</li>
-            <li>Processing subscription renewals and cancellations</li>
-            <li>Providing access to enhanced plan comparison tools</li>
-          </ul>
+        <h3>With Service Providers</h3>
+        <p>We share certain information with trusted third-party providers who help us operate our app and deliver services. Specifically:</p>
+        <ul>
+          <li>
+            <strong>Supabase (authentication, database storage)</strong>
+            <ul>
+              <li><em>Shared data:</em> Email address, encrypted password, mobile plan details, account activity logs.</li>
+              <li><em>Purpose:</em> To provide secure account management and store your plan information.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>RevenueCat (subscription management)</strong>
+            <ul>
+              <li><em>Shared data:</em> Subscription status and transaction identifiers received from Apple App Store or Google Play.</li>
+              <li><em>Purpose:</em> To determine premium access and manage subscription features.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Expo Push Notification Service</strong>
+            <ul>
+              <li><em>Shared data:</em> Device-specific push notification tokens.</li>
+              <li><em>Purpose:</em> To deliver push notifications to your device.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>AWS and Vercel (hosting and infrastructure)</strong>
+            <ul>
+              <li><em>Shared data:</em> Automatically generated server logs (e.g., IP address, browser/device type, access time).</li>
+              <li><em>Purpose:</em> To ensure security, stability, and reliable hosting of our app and website.</li>
+            </ul>
+          </li>
+        </ul>
 
-          <h3>3.4 Service Improvement</h3>
-          <ul>
-            <li>Analyzing usage patterns to improve App functionality</li>
-            <li>Developing new features and services</li>
-            <li>Ensuring the security and stability of our App</li>
-          </ul>
-        </div>
+        <h3>For Legal and Safety Purposes</h3>
+        <p>
+          We may disclose information if required by law, regulation, legal process, or governmental request, or if we
+          believe it is necessary to protect the rights, property, or safety of CheaperPlan, our users, or others.
+        </p>
 
-        <div className="section">
-          <h2>4. How We Share Your Information</h2>
-          <p>We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:</p>
+        <h3>In Business Transfers</h3>
+        <p>
+          In the event of a merger, acquisition, reorganization, or sale of assets, your information may be transferred
+          as part of that transaction, subject to the commitments of this Privacy Policy.
+        </p>
 
-          <h3>4.1 Service Providers</h3>
-          <p>We may share your information with trusted third-party service providers who assist us in operating our App:</p>
-          <ul>
-            <li><strong>Supabase:</strong> For data storage and user authentication</li>
-            <li><strong>RevenueCat:</strong> For subscription management and payment processing</li>
-            <li><strong>Expo:</strong> For push notifications and app distribution</li>
-          </ul>
+        <h3>With Your Consent</h3>
+        <p>We may share your information with third parties if you give us explicit permission to do so.</p>
+        </section>
 
-          <h3>4.2 Legal Requirements</h3>
-          <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities.</p>
-
-          <h3>4.3 Business Transfers</h3>
-          <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</p>
-        </div>
-
-        <div className="section">
+        <section id="security">
           <h2>5. Data Storage and Security</h2>
-          
-          <h3>5.1 Data Storage</h3>
-          <ul>
-            <li>Your data is securely stored using Supabase's cloud infrastructure</li>
-            <li>Authentication sessions are managed locally on your device using secure storage</li>
-            <li>All data transmission is encrypted using industry-standard protocols</li>
-          </ul>
+        <p>We take the protection of your information seriously.</p>
+        <ul>
+          <li>
+            <strong>Storage Location:</strong> Your information is stored on secure servers provided by our trusted
+            hosting and database providers, including Supabase and Amazon Web Services (AWS). Our website infrastructure
+            is hosted by Vercel.
+          </li>
+          <li>
+            <strong>Encryption and Secure Transmission:</strong> All data is transmitted using HTTPS/TLS encryption.
+            Passwords are stored in encrypted form, and we do not store your credit card or payment details.
+          </li>
+          <li>
+            <strong>Access Control:</strong> Access to personal information is restricted to authorized personnel and
+            service providers who need it to operate and maintain our services.
+          </li>
+          <li>
+            <strong>Data Retention:</strong> We retain personal information only as long as necessary to provide our
+            services or as required by law. Users may request deletion of their account and associated data at any time.
+          </li>
+          <li>
+            <strong>User Responsibility:</strong> While we take appropriate measures to protect your data, no system can
+            be guaranteed 100% secure. We encourage you to keep your account password safe and notify us immediately of
+            any unauthorized use.
+          </li>
+        </ul>
+        </section>
 
-          <h3>5.2 Security Measures</h3>
-          <ul>
-            <li>We implement appropriate technical and organizational measures to protect your personal information</li>
-            <li>Access to your data is restricted to authorized personnel only</li>
-            <li>We regularly review and update our security practices</li>
-          </ul>
+        <section id="rights">
+          <h2>6. User Rights</h2>
+        <p>We respect your rights regarding your personal information and provide ways for you to manage it:</p>
+        <ul>
+          <li><strong>Access:</strong> You may request a copy of the personal information we hold about you.</li>
+          <li>
+            <strong>Rectification/Correction:</strong> You can update your account information (such as your email or
+            mobile plan details) directly within the app. If any other information we hold about you is inaccurate, you
+            may request correction.
+          </li>
+          <li>
+            <strong>Deletion:</strong> You may request deletion of your account and associated data at any time by
+            contacting us at <a href="mailto:support@cheaperplan.net">support@cheaperplan.net</a>. Once your request is
+            verified, we will permanently remove your personal information unless we are required to retain it by law.
+          </li>
+          <li>
+            <strong>Objection/Restriction:</strong> You may request that we stop using your personal information for
+            certain purposes, or limit how it is processed. For example, you can ask us not to send you plan
+            recommendations.
+          </li>
+          <li>
+            <strong>Withdraw Consent:</strong> Where we rely on your consent (for example, storing your mobile plan
+            details to provide comparisons), you may withdraw that consent at any time by contacting us.
+          </li>
+        </ul>
+        </section>
 
-          <h3>5.3 Data Retention</h3>
-          <ul>
-            <li>We retain your personal information for as long as necessary to provide our services</li>
-            <li>You may request deletion of your account and associated data at any time</li>
-            <li>Some information may be retained for legal or regulatory requirements</li>
-          </ul>
-        </div>
+        <section id="retention">
+          <h2>7. Data Retention</h2>
+        <p>
+          We retain personal information only for as long as necessary to provide our services or as required by law.
+          Specifically:
+        </p>
+        <ul>
+          <li>
+            <strong>Account Information (email, password):</strong> Retained for as long as your account remains active.
+            If you delete your account, this information will be permanently removed from our systems within a
+            reasonable period, unless we are legally required to keep it.
+          </li>
+          <li>
+            <strong>Mobile Plan Details:</strong> Retained while your account is active so that we can provide plan
+            comparisons and recommendations. Deleted when your account is deleted.
+          </li>
+          <li>
+            <strong>Usage Data (viewed recommendations):</strong> Retained only as needed to avoid sending duplicate
+            notifications. This data is deleted when your account is deleted.
+          </li>
+          <li>
+            <strong>Push Notification Tokens:</strong> Retained while notifications remain enabled for your device.
+            Tokens are deleted automatically when you disable notifications or uninstall the app.
+          </li>
+          <li>
+            <strong>Subscription Data (from App Store, Google Play, RevenueCat):</strong> Retained for as long as
+            needed to manage your subscription and comply with billing or legal obligations.
+          </li>
+          <li>
+            <strong>Server and Hosting Logs (AWS, Vercel):</strong> Automatically retained for a limited period
+            (typically 30–90 days) for security and troubleshooting, then deleted or anonymized.
+          </li>
+        </ul>
+        <p>
+          If you request deletion of your account, we will also delete associated personal information, except where
+          retention is required for legal, regulatory, or security purposes.
+        </p>
+        </section>
 
-        <div className="section">
-          <h2>6. Your Rights and Choices</h2>
-          
-          <h3>6.1 Access and Control</h3>
-          <ul>
-            <li>You can access and update your account information through the App settings</li>
-            <li>You can modify or delete your mobile plan information at any time</li>
-            <li>You can manage your push notification preferences in the App</li>
-          </ul>
-
-          <h3>6.2 Account Deletion</h3>
-          <ul>
-            <li>You may delete your account and associated data by contacting our support team</li>
-            <li>Upon account deletion, we will remove your personal information from our systems within 30 days</li>
-          </ul>
-
-          <h3>6.3 Push Notifications</h3>
-          <ul>
-            <li>You can disable push notifications through your device settings or within the App</li>
-            <li>Disabling notifications may affect your ability to receive plan recommendations</li>
-          </ul>
-        </div>
-
-        <div className="section">
-          <h2>7. International Data Transfers</h2>
-          <p>
-            Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and that appropriate safeguards are in place.
-          </p>
-        </div>
-
-        <div className="section">
+        <section id="children">
           <h2>8. Children's Privacy</h2>
-          <p>
-            Our App is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.
-          </p>
-        </div>
+        <p>
+          Our services are not directed to children under the age of 13, and we do not knowingly collect personal
+          information from children under 13. If you are under 13, please do not use CheaperPlan or provide any personal
+          information to us.
+        </p>
+        <p>
+          If we become aware that we have inadvertently collected personal information from a child under 13, we will
+          take steps to delete such information promptly.
+        </p>
+        <p>
+          Parents or guardians who believe their child may have provided us with personal information can contact us at{" "}
+          <a href="mailto:support@cheaperplan.net">support@cheaperplan.net</a> to request deletion.
+        </p>
+        </section>
 
-        <div className="section">
-          <h2>9. Changes to This Privacy Policy</h2>
-          <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by:</p>
-          <ul>
-            <li>Posting the new Privacy Policy in the App</li>
-            <li>Sending you a notification through the App</li>
-            <li>Updating the "Effective Date" at the top of this Privacy Policy</li>
-          </ul>
-          <p>Your continued use of the App after any changes constitutes your acceptance of the new Privacy Policy.</p>
-        </div>
+        <section id="updates">
+          <h2>9. Policy Updates</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect changes in our practices, technologies, legal
+          requirements, or other factors.
+        </p>
+        <p>When we make material changes, we will notify you by:</p>
+        <ul>
+          <li>
+            Posting the updated Privacy Policy on our website at{" "}
+            <a href="https://cheaperplan.net/privacy" target="_blank" rel="noopener noreferrer">
+              cheaperplan.net/privacy
+            </a>
+            ; and/or
+          </li>
+          <li>Providing an in-app notice or email notification where appropriate.</li>
+        </ul>
+        <p>The date at the top of this Privacy Policy indicates when it was last updated.</p>
+        <p>We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.</p>
+        </section>
 
-        <div className="section">
-          <h2>10. Third-Party Services</h2>
-          <p>Our App integrates with the following third-party services, each with their own privacy policies:</p>
-          <ul>
-            <li><strong>Supabase:</strong> https://supabase.com/privacy</li>
-            <li><strong>RevenueCat:</strong> https://www.revenuecat.com/privacy/</li>
-            <li><strong>Expo:</strong> https://expo.dev/privacy</li>
-          </ul>
-          <p>We encourage you to review the privacy policies of these third-party services.</p>
-        </div>
+        <section id="contact">
+          <h2>10. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
+        <address>
+          <div><strong>CheaperPlan Support</strong></div>
+          <div>Email: <a href="mailto:support@cheaperplan.net">support@cheaperplan.net</a></div>
+        </address>
+        <p>We will make reasonable efforts to respond to your inquiry in a timely manner.</p>
+        </section>
+      </article>
 
-        <div className="section">
-          <h2>11. Contact Information</h2>
-          <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
-          <ul>
-            <li><strong>Email:</strong> [Insert Contact Email]</li>
-            <li><strong>Address:</strong> [Insert Business Address]</li>
-          </ul>
-        </div>
-
-        <div className="section">
-          <h2>12. Compliance</h2>
-          <p>This Privacy Policy is designed to comply with applicable privacy laws, including but not limited to:</p>
-          <ul>
-            <li>General Data Protection Regulation (GDPR)</li>
-            <li>California Consumer Privacy Act (CCPA)</li>
-            <li>Personal Information Protection and Electronic Documents Act (PIPEDA)</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div className="footer">
-        <p>&copy; 2024 CheaperPlan. All rights reserved.</p>
-      </div>
-    </div>
-  )
+    </main>
+  );
 }

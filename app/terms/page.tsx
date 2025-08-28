@@ -1,166 +1,260 @@
+// app/terms/page.tsx
+import type { Metadata } from "next";
+import styles from '../styles/legal-page.module.css';
+
+export const metadata: Metadata = {
+  title: "Terms of Use | CheaperPlan",
+  description:
+    "CheaperPlan Terms of Use: subscriptions, billing, refunds, content accuracy, third-party services, termination, changes, liability, governing law, and contact.",
+};
+
+const LAST_UPDATED = "August 28, 2025";
+
 export default function Terms() {
   return (
-    <div className="container">
-      <div className="header">
-        <div className="logo">CheaperPlan</div>
-      </div>
-      
-      <div className="content">
-        <h1 className="title">使用条款</h1>
-        <p className="subtitle">
-          最后更新日期：{new Date().toLocaleDateString('zh-CN')}
-        </p>
-        
-        <div className="section">
-          <h2>1. 接受条款</h2>
-          <p>
-            欢迎使用 CheaperPlan！通过访问或使用我们的服务，您同意遵守并受这些使用条款的约束。
-            如果您不同意这些条款，请不要使用我们的服务。
-          </p>
-        </div>
+    <main>
+      <article className={styles.container}>
+        <header>
+          <h1>Terms of Use</h1>
+          <p className={styles.muted}>Last updated: {LAST_UPDATED}</p>
+        </header>
 
-        <div className="section">
-          <h2>2. 服务描述</h2>
+        <nav className={styles.tableOfContents}>
+          <h2>Table of Contents</h2>
+          <p>Click on the links below to jump to each section:</p>
+          <ol>
+            <li><a href="#acceptance">Acceptance of Terms</a></li>
+            <li><a href="#eligibility">Eligibility and Account</a></li>
+            <li><a href="#services">Services and License</a></li>
+            <li><a href="#subscriptions">Subscriptions and Billing</a></li>
+            <li><a href="#refunds">Refunds</a></li>
+            <li><a href="#content">Content and Accuracy</a></li>
+            <li><a href="#third-party">Third-Party Services</a></li>
+            <li><a href="#termination">Termination and Suspension</a></li>
+            <li><a href="#changes">Changes to Terms</a></li>
+            <li><a href="#liability">Disclaimer and Limitation of Liability</a></li>
+            <li><a href="#governing">Governing Law</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ol>
+        </nav>
+
+        <section id="acceptance">
+          <h2>1. Acceptance of Terms</h2>
           <p>
-            CheaperPlan 是一个智能规划助手平台，旨在帮助用户：
+            By downloading, installing, creating an account, or otherwise using the CheaperPlan mobile
+            application ("CheaperPlan," "we," "our," or "us"), you acknowledge that you have read,
+            understood, and agreed to be bound by these Terms of Use (the "Terms"), together with our
+            Privacy Policy. If you do not agree, you must not use CheaperPlan.
+          </p>
+          <p>
+            Your use of CheaperPlan also confirms that you have the legal capacity to enter into this
+            agreement under the laws of your place of residence. If you are using CheaperPlan on
+            behalf of an organization, you represent and warrant that you are authorized to bind that
+            entity to these Terms.
+          </p>
+        </section>
+
+        <section id="eligibility">
+          <h2>2. Eligibility and Account</h2>
+          <p>
+            You must be at least thirteen (13) years of age, or any higher minimum age required by
+            local law, to use CheaperPlan. If you are under the legal minimum age, you may only use
+            CheaperPlan under the supervision of a parent or legal guardian who agrees to be bound by
+            these Terms on your behalf.
+          </p>
+          <p>By creating an account, you agree to:</p>
+          <ul>
+            <li>Provide accurate, current, and complete information;</li>
+            <li>Maintain and promptly update such information;</li>
+            <li>Keep your login credentials secure and confidential;</li>
+            <li>Accept responsibility for all activities under your account.</li>
+          </ul>
+          <p>
+            We reserve the right to suspend or terminate accounts that contain inaccurate information
+            or are used in violation of these Terms.
+          </p>
+        </section>
+
+        <section id="services">
+          <h2>3. Services and License</h2>
+          <p>
+            CheaperPlan provides tools and recommendations to help users compare mobile phone plans
+            and identify potential savings. Information may include pricing, data allowances, features,
+            and coverage sourced from carriers or third parties. While we strive for accuracy, we do
+            not guarantee completeness or timeliness of such information.
+          </p>
+          <p>
+            Subject to compliance with these Terms, we grant you a limited, non-exclusive,
+            non-transferable, revocable license to use CheaperPlan for personal, non-commercial
+            purposes.
+          </p>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Copy, modify, distribute, sell, or lease any part of CheaperPlan;</li>
+            <li>Reverse engineer or attempt to extract source code, except where permitted by law;</li>
+            <li>Use automated tools (bots, crawlers, scrapers) to access or interact with CheaperPlan;</li>
+            <li>Use CheaperPlan in violation of applicable laws or third-party rights.</li>
+          </ul>
+        </section>
+
+        <section id="subscriptions">
+          <h2>4. Subscriptions and Billing</h2>
+          <p>
+            CheaperPlan may offer subscription-based features ("Subscriptions").
+          </p>
+          <p><strong>Payment and Renewal.</strong> Subscriptions are billed through your Apple App Store
+            or Google Play account. Unless canceled at least 24 hours before the end of the billing
+            period, Subscriptions renew automatically at the then-current price. Renewal charges are
+            processed within 24 hours before the billing period ends.</p>
+          <p><strong>Trial Periods.</strong> If CheaperPlan offers a free trial, its length will be
+            disclosed at sign-up. Unless canceled before the trial ends, the Subscription automatically
+            converts to a paid plan at the stated rate.</p>
+          <p><strong>Managing Subscriptions.</strong> You may manage or cancel Subscriptions anytime
+            through your App Store or Google Play account settings. Deleting the app does not cancel
+            your Subscription.</p>
+          <p><strong>Price Changes.</strong> We may change Subscription prices from time to time. If so,
+            you will be notified in advance. The new price applies at your next billing cycle unless
+            you cancel before renewal.</p>
+        </section>
+
+        <section id="refunds">
+          <h2>5. Refunds</h2>
+          <p>
+            All payments are processed by Apple or Google. Refund requests must be submitted directly
+            through Apple or Google according to their policies. CheaperPlan cannot issue refunds
+            independently.
           </p>
           <ul>
-            <li>创建和管理个人或团队计划</li>
-            <li>优化资源配置和成本控制</li>
-            <li>提供智能建议和分析</li>
-            <li>协作和分享规划内容</li>
+            <li>
+              Apple users:&nbsp;
+              <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank" rel="noopener noreferrer">
+                Apple Media Services Terms and Conditions
+              </a>
+            </li>
+            <li>
+              Google users:&nbsp;
+              <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener noreferrer">
+                Google Play Refund Policy
+              </a>
+            </li>
           </ul>
-        </div>
+        </section>
 
-        <div className="section">
-          <h2>3. 用户账户</h2>
-          <h3>3.1 注册要求</h3>
+        <section id="content">
+          <h2>6. Content and Accuracy</h2>
+          <p>
+            Plan information, pricing, coverage, and savings estimates are provided for informational
+            purposes only.
+          </p>
           <ul>
-            <li>您必须年满 18 岁才能使用我们的服务</li>
-            <li>提供准确、完整的注册信息</li>
-            <li>保持账户信息的及时更新</li>
-            <li>对账户安全负责，包括密码保护</li>
+            <li>
+              Savings amounts represent <strong>maximum potential savings</strong> ("may save up to")
+              compared to the lowest plan in our database at the time of calculation. Actual savings
+              vary depending on carrier eligibility, region, taxes, device balances, and promotional
+              validity.
+            </li>
+            <li>
+              You are responsible for verifying final terms directly with carriers before making
+              purchase or contract decisions.
+            </li>
+            <li>
+              We disclaim responsibility for discrepancies caused by carrier changes, expired offers,
+              or coverage variability.
+            </li>
           </ul>
-          
-          <h3>3.2 账户责任</h3>
-          <p>
-            您对通过您的账户进行的所有活动负责。如果发现账户被未经授权使用，
-            请立即通知我们。
-          </p>
-        </div>
+        </section>
 
-        <div className="section">
-          <h2>4. 可接受的使用</h2>
-          <p>使用我们的服务时，您同意不会：</p>
+        <section id="third-party">
+          <h2>7. Third-Party Services</h2>
+          <p>
+            CheaperPlan relies on third-party service providers (including cloud infrastructure,
+            databases, and APIs such as Supabase) to operate. While we take reasonable measures to
+            choose reliable providers, we cannot guarantee uninterrupted or error-free service.
+          </p>
           <ul>
-            <li>违反任何适用的法律法规</li>
-            <li>侵犯他人的知识产权</li>
-            <li>上传恶意软件或有害内容</li>
-            <li>进行任何形式的骚扰或滥用</li>
-            <li>尝试未经授权访问系统或数据</li>
-            <li>干扰服务的正常运行</li>
-            <li>进行商业垃圾邮件或广告活动</li>
+            <li>
+              Service disruptions, delays, or data breaches caused by third parties may affect
+              CheaperPlan's availability.
+            </li>
+            <li>
+              We will comply with legal obligations, including breach notifications, if user data is
+              compromised.
+            </li>
+            <li>
+              Nothing in these Terms excludes our liability for our own gross fault, intentional
+              misconduct, or violations of mandatory law.
+            </li>
           </ul>
-        </div>
+        </section>
 
-        <div className="section">
-          <h2>5. 内容和知识产权</h2>
-          <h3>5.1 用户内容</h3>
+        <section id="termination">
+          <h2>8. Termination and Suspension</h2>
           <p>
-            您保留对上传到我们平台的内容的所有权。通过上传内容，您授予我们
-            使用、存储、显示该内容以提供服务的许可。
+            We may suspend or terminate your access if we reasonably believe you have:
           </p>
-          
-          <h3>5.2 我们的知识产权</h3>
-          <p>
-            我们的服务、软件、商标、版权和其他知识产权受法律保护。
-            未经明确许可，您不得复制、修改或分发这些内容。
-          </p>
-        </div>
-
-        <div className="section">
-          <h2>6. 付费服务</h2>
-          <p>某些功能可能需要付费订阅：</p>
           <ul>
-            <li>订阅费用将在购买时明确显示</li>
-            <li>除非另有说明，订阅将自动续费</li>
-            <li>您可以随时取消订阅</li>
-            <li>退款政策详见我们的退款条款</li>
+            <li>Violated these Terms or our Privacy Policy;</li>
+            <li>Engaged in fraudulent, abusive, or unlawful activities;</li>
+            <li>Misused the app in ways harmful to others.</li>
           </ul>
-        </div>
-
-        <div className="section">
-          <h2>7. 隐私</h2>
           <p>
-            我们重视您的隐私。请查阅我们的
-            <a href="/privacy" style={{ color: '#0070f3', textDecoration: 'underline' }}>
-              隐私政策
-            </a>
-            了解我们如何收集、使用和保护您的信息。
+            If terminated for breach, you are not entitled to refunds. You may stop using CheaperPlan
+            anytime by canceling your Subscription or deleting your account. We will provide notice and
+            an opportunity to remedy violations where required by law.
           </p>
-        </div>
+        </section>
 
-        <div className="section">
-          <h2>8. 服务可用性</h2>
+        <section id="changes">
+          <h2>9. Changes to Terms</h2>
           <p>
-            我们努力保持服务的可用性，但不保证服务始终可用或无错误。
-            我们可能会因维护、更新或其他原因暂时中断服务。
+            We may revise these Terms to reflect service updates or legal requirements. For material
+            changes, we will notify you by in-app message, email, or website posting. Updated Terms
+            take effect on the stated date. Continuing to use CheaperPlan constitutes acceptance.
           </p>
-        </div>
+        </section>
 
-        <div className="section">
-          <h2>9. 免责声明</h2>
+        <section id="liability">
+          <h2>10. Disclaimer and Limitation of Liability</h2>
           <p>
-            我们的服务按"现状"提供，不提供任何明示或暗示的保证。
-            我们不保证服务将满足您的特定需求或始终可用。
+            CheaperPlan is provided "as is" and "as available." We disclaim all warranties to the
+            fullest extent permitted by law, including merchantability, fitness for a purpose, and
+            non-infringement.
           </p>
-        </div>
-
-        <div className="section">
-          <h2>10. 责任限制</h2>
           <p>
-            在法律允许的最大范围内，我们对因使用或无法使用我们的服务而造成的
-            任何直接、间接、附带或后果性损害不承担责任。
+            To the maximum extent permitted by applicable law, we are not liable for indirect,
+            incidental, consequential, special, or punitive damages (including lost savings, profits,
+            data, or goodwill). Our total liability for any claim is limited to the total amount you
+            paid for Subscriptions during the twelve (12) months immediately preceding the claim.
           </p>
-        </div>
-
-        <div className="section">
-          <h2>11. 条款修改</h2>
           <p>
-            我们保留随时修改这些条款的权利。重大变更将提前通知用户。
-            继续使用服务表示您接受修改后的条款。
+            <strong>Québec Carve-Out.</strong> Nothing in these Terms excludes or limits liability for{" "}
+            <strong>intentional or gross fault</strong>, or for <strong>bodily or moral injury</strong>,
+            as provided under the Civil Code of Québec.
           </p>
-        </div>
+        </section>
 
-        <div className="section">
-          <h2>12. 终止</h2>
+        <section id="governing">
+          <h2>11. Governing Law</h2>
           <p>
-            我们或您都可以随时终止您的账户。终止后，您将无法访问您的账户和数据。
-            我们可能因违反条款而暂停或终止您的账户。
+            These Terms are governed by the laws of Canada and the province of Québec. If you reside
+            elsewhere, you may also benefit from mandatory consumer protections in your jurisdiction.
+            Disputes will be subject to the exclusive jurisdiction of Québec courts, unless mandatory
+            consumer law grants you the right to sue locally.
           </p>
-        </div>
+        </section>
 
-        <div className="section">
-          <h2>13. 适用法律</h2>
-          <p>
-            这些条款受中华人民共和国法律管辖。任何争议将通过友好协商解决，
-            如协商不成，将提交至有管辖权的人民法院解决。
-          </p>
-        </div>
+        <section id="contact">
+          <h2>12. Contact Us</h2>
+          <p>If you have any questions, concerns, or requests regarding these Terms of Use, please contact us at:</p>
+          <address>
+            <div><strong>CheaperPlan Support</strong></div>
+            <div>Email: <a href="mailto:support@cheaperplan.net">support@cheaperplan.net</a></div>
+            <div>Website: <a href="https://www.cheaperplan.net" target="_blank" rel="noopener noreferrer">www.cheaperplan.net</a></div>
+          </address>
+          <p>We will make reasonable efforts to respond to your inquiry in a timely manner.</p>
+        </section>
+      </article>
 
-        <div className="section">
-          <h2>14. 联系信息</h2>
-          <p>如果您对这些条款有任何问题，请联系我们：</p>
-          <ul>
-            <li>邮箱：legal@cheaperplan.com</li>
-            <li>地址：[您的公司地址]</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div className="footer">
-        <p>&copy; 2024 CheaperPlan. 保留所有权利。</p>
-      </div>
-    </div>
-  )
+    </main>
+  );
 }
